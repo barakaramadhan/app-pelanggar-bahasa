@@ -1,0 +1,248 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: #f0f4f8;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+}
+
+/* Container */
+.container {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  max-width: 850px;
+  width: 100%;
+  border: 1px solid #ddd;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Judul */
+.container h1 {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 25px;
+  color: #2c7a7b;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Input area */
+.input-area {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 25px;
+  justify-content: center;
+}
+
+.input-area input {
+  flex: 1;
+  min-width: 220px;
+  padding: 12px 15px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fafafa;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-area input:focus {
+  border-color: #2c7a7b;
+  box-shadow: 0 0 6px rgba(44, 122, 123, 0.3);
+  outline: none;
+}
+
+/* Tombol Add */
+.input-area button {
+  padding: 12px 20px;
+  font-size: 15px;
+  border: none;
+  border-radius: 8px;
+  background: #2c7a7b;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.input-area button:hover {
+  background: #285e61;
+  box-shadow: 0 4px 10px rgba(44, 122, 123, 0.3);
+}
+
+.input-area button:active {
+  transform: scale(0.97);
+}
+
+/* Tabel */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+thead {
+  background: #2c7a7b;
+  color: #fff;
+}
+
+thead th {
+  padding: 14px;
+  font-size: 15px;
+  text-align: left;
+}
+
+tbody tr {
+  border-bottom: 1px solid #eee;
+  transition: background 0.2s;
+}
+
+tbody tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+tbody tr:hover {
+  background: #e6fffa;
+}
+
+tbody td {
+  padding: 12px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Tombol aksi */
+.action-btn {
+  padding: 6px 12px;
+  margin: 0 3px;
+  font-size: 13px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.edit-btn {
+  background: #f6ad55;
+  color: #fff;
+}
+
+.edit-btn:hover {
+  background: #dd6b20;
+}
+
+.delete-btn {
+  background: #e53e3e;
+  color: #fff;
+}
+
+.delete-btn:hover {
+  background: #c53030;
+}
+
+/* Animasi */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================= */
+/*  RESPONSIVE DESIGN */
+/* ========================= */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  .container h1 {
+    font-size: 22px;
+  }
+
+  .input-area {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .input-area input {
+    min-width: 100%;
+  }
+
+  .input-area button {
+    width: 100%;
+  }
+
+  thead th, tbody td {
+    font-size: 13px;
+    padding: 10px;
+  }
+}
+
+/* HP */
+@media (max-width: 480px) {
+  body {
+    padding: 20px 10px;
+  }
+
+  .container {
+    padding: 15px 20px;
+    border-radius: 10px;
+  }
+
+  .container h1 {
+    font-size: 20px;
+  }
+
+  .input-area {
+    gap: 8px;
+  }
+
+  .input-area input {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .input-area button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  table {
+    font-size: 12px;
+    display: block;
+    overflow-x: auto; /* Supaya tabel bisa di-scroll di layar kecil */
+    white-space: nowrap;
+  }
+
+  thead th, tbody td {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .action-btn {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+}
